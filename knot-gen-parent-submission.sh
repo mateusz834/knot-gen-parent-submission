@@ -74,7 +74,7 @@ while read line; do
 done <<< $(echo "$NSs")
 
 if [ ${#ns[*]} -eq 0 ]; then
-	echo "query for $parent NS returned 0 records"
+	echo "query for $parent NS returned 0 records" 1>&2
 	exit 2
 fi
 
